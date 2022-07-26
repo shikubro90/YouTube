@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import youtubeThumbnail from '../img/youtubeapp.png'
 import channelsThumbnail from '../img/channelsThumbnail.jpg'
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     width: 350px;
@@ -49,18 +50,19 @@ const Info = styled.div`
 
 const Card = () => {
     return (
-        <Container>
-            <Image src={youtubeThumbnail}/>
-            <Details>
-                <ChannelImage src={channelsThumbnail}/>
-                <DetailsText>
-                    <Title>Test Video</Title>
-                    <ChannelName  >ShikuTube</ChannelName>
-                    <Info>660, 908 view . 1 day ago</Info>
-                </DetailsText>
-            </Details>
-
-        </Container>
+        <Link to="video/test" style={{textDecoration: "none", color: "inherit"}}> 
+            <Container>
+                <Image src={youtubeThumbnail}/>
+                <Details>
+                    <ChannelImage src={channelsThumbnail}/>
+                    <DetailsText>
+                        <Title>Test Video</Title>
+                        <ChannelName  >ShikuTube</ChannelName>
+                        <Info>660, 908 view . 1 day ago</Info>
+                    </DetailsText>
+                </Details>
+            </Container>
+        </Link>
     );
 };
 

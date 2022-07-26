@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../img/youtubelogo.png'
+import {Link} from 'react-router-dom'
 
 import HomeIcon from '@mui/icons-material/Home';
 import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
@@ -66,6 +67,7 @@ const Logo = styled.div`
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 20px;
+    color: ${({theme})=>theme.text};
 `;
 
 const Item = styled.div`
@@ -119,40 +121,51 @@ const Menu = ({darkMode,setDarkMode}) => {
 
         <Container>
             <Wrapper>
-                <Logo>
-                    <Image src={logo}/>
-                    ShikuTube
-                </Logo>
+                <Link to="/" style={{textDecoraton : "none !important" }}>
+                    <Logo>
+                        <Image src={logo}/>
+                        ShikuTube
+                    </Logo>
+                </Link>
+
                 <Item>
                     <HomeIcon/>
                     Home
                 </Item>
+
                 <Item>
                     <ExploreOutlinedIcon/>
                     Explore
                 </Item>
+
                 <Item>
                     <SubscriptionsOutlinedIcon/>
                     Subscription
                 </Item>
+                
                 <Hr/>
                 <Item>
                     <VideoLibraryOutlinedIcon/>
                     Library
                 </Item>
+
                 <Item>
                     <HistoryOutlinedIcon/>
                     History
                 </Item>
+
                 <Hr/>
+
                 <Login>
                     Sign in to like video, comment and subscribe.
                     <Button><AccountCircleOutlinedIcon/> SIGN IN</Button>
                 </Login>
+
                 <Hr/>
                 <SmallTitle>
                     BEST PART OF SHIKU TUBE
                 </SmallTitle>
+
                 <Item>
                     <LibraryMusicOutlinedIcon/>
                     Music
