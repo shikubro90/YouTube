@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
+import ThumbDownOutlinedIcon from '@mui/icons-material/ThumbDownOutlined';
+import ReplyOutlined  from '@mui/icons-material/ReplyOutlined';
+import  AddTaskOutlined  from '@mui/icons-material/AddTaskOutlined';
 
 
 const Container = styled.div`
@@ -35,6 +39,10 @@ const Buttons = styled.div`
     color: ${({theme})=>theme.text};
 `
 const Button = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
 
 `
 
@@ -47,7 +55,43 @@ const Recommendation = styled.div`
     flex: 2;
 `
 
+const Hr = styled.hr`
+    margin: 15px 0;
+    border  : 0.5 px solid ${({theme})=>theme.textSoft};
+`;
 
+
+const Channel = styled.div`
+    display  : flex;
+    justify-content: space-between;
+`;
+
+const ChannelInfo = styled.div`
+    
+`
+
+const SubscribeButton = styled.button`
+    
+`
+
+const ChannelImage = styled.img`
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #999;
+`;
+const ChannelName = styled.h2`
+    font-size: 14px;
+    color: ${({theme})=>theme.textSoft};
+    margin: 9px 0px;
+`
+const ChannelCounter = styled.div`
+    
+`;
+
+const ChannelDecsription = styled.div`
+      
+`;
 
 const Video = () => {
     return (
@@ -66,10 +110,19 @@ const Video = () => {
                 <Details>
                     <Info>23,139 viewsJun 30, 2022</Info>
                     <Buttons>
-                        <Button>Button</Button>
-                        <Button>Button</Button>
+                        <Button><ThumbUpOutlinedIcon/>123</Button>
+                        <Button><ThumbDownOutlinedIcon/></Button>
+                        <Button><ReplyOutlined/></Button>
+                        <Button><AddTaskOutlined/></Button>
                     </Buttons>
                 </Details>
+                <Hr/>
+
+                <Channel>
+                    <ChannelInfo>ChannelInfo</ChannelInfo>
+                    <SubscribeButton>SUBSCRIBE</SubscribeButton>
+                </Channel>
+
             </Content>
 
             <Recommendation>

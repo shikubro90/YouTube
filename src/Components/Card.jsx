@@ -29,7 +29,7 @@ const ChannelImage = styled.img`
 `;
 
 const DetailsText = styled.div`
-    
+    padding: 0px 10px;
 `
 const Title = styled.h1`
     font-size: 16px;

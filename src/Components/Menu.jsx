@@ -116,6 +116,7 @@ const SmallTitle = styled.div`
 
 
 
+
 const Menu = ({darkMode,setDarkMode}) => {
     return (
 
@@ -205,7 +206,7 @@ const Menu = ({darkMode,setDarkMode}) => {
                 </Item>
                 <Item onClick={()=>setDarkMode(!darkMode)}>
                     <SettingsBrightnessOutlinedIcon/>
-                    Light Mode
+                    {darkMode ? "Light" : "Dark"} Mode
                 </Item> 
             </Wrapper>
         </Container>
