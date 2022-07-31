@@ -39,7 +39,7 @@ const Comment = () => {
         <Container>
             <ChannelImage src={Avatar}/>
             <ChannelDetails>
-                <ChannelName>Shiku Tube <CommentTime>1 day ago</CommentTime></ChannelName>
+                <ChannelName>Shiku Tube <CommentTime>1 day ago</CommentDesc></ChannelName>
                 <CommentDesc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ratione modi repudiandae quia ipsum!</CommentDesc>
             </ChannelDetails>
         </Container>
